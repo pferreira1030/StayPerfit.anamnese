@@ -295,6 +295,10 @@ body {
         <input class="spf-input" type="email" placeholder="o.teu@email.com" id="f_email">
       </div>
       <div class="spf-field">
+        <label class="spf-label">Número de Telefone <span class="req">*</span></label>
+        <input class="spf-input" type="tel" placeholder="Ex: 912 345 678" id="f_telefone">
+      </div>
+      <div class="spf-field">
         <label class="spf-label">Primeiro e Último Nome <span class="req">*</span></label>
         <input class="spf-input" type="text" placeholder="Nome completo" id="f_nome">
       </div>
@@ -648,7 +652,7 @@ body {
     el.addEventListener('input', updateProgress);
   });
 
-  const TEXT_FIELDS = ['f_email','f_nome','f_idade','f_peso','f_altura','f_lesao','f_doenca','f_medicacao','f_sono','f_acorda','f_deita','f_rotina','f_desporto','f_tempo_treino','f_hora_treino','f_material','f_evitar','f_prioridade_muscular','f_refeicoes','f_restricao','f_comida_fav','f_nao_come','f_plano_anterior','f_suplementos'];
+  const TEXT_FIELDS = ['f_email','f_telefone','f_nome','f_idade','f_peso','f_altura','f_lesao','f_doenca','f_medicacao','f_sono','f_acorda','f_deita','f_rotina','f_desporto','f_tempo_treino','f_hora_treino','f_material','f_evitar','f_prioridade_muscular','f_refeicoes','f_restricao','f_comida_fav','f_nao_come','f_plano_anterior','f_suplementos'];
   const RADIO_GROUPS = ['sexo','objetivo','trabalho','fumador','alcool','passos','stress','nivel','duracao_treino','freq_treino','local_treino','tipo_treino','agua','n_refeicoes','cozinha','levar_comida','fora','orcamento'];
 
   function updateProgress() {
@@ -699,6 +703,7 @@ body {
 
     const data = {
       Email: document.getElementById('f_email').value,
+      Telefone: document.getElementById('f_telefone').value,
       Nome: document.getElementById('f_nome').value,
       Idade: document.getElementById('f_idade').value,
       Sexo: g('sexo'),
